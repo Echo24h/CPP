@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gborne/Bureau/42/CPP/module_00/ex01'
+g++ -Wall -Wextra -Werror -std=c++98   -c -o main.o main.cpp
+g++ -Wall -Wextra -Werror -std=c++98   -c -o PhoneBook.o PhoneBook.cpp
+g++ -Wall -Wextra -Werror -std=c++98   -c -o Contact.o Contact.cpp
+g++ -Wall -Wextra -Werror -std=c++98 -o phonebook main.o PhoneBook.o Contact.o
+make: Leaving directory '/home/gborne/Bureau/42/CPP/module_00/ex01'
+ 
