@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 17:34:31 by gborne            #+#    #+#             */
-/*   Updated: 2022/05/27 16:15:58 by gborne           ###   ########.fr       */
+/*   Updated: 2022/05/29 13:59:05 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ public:
 
 	Contact(void);
 	~Contact(void);
-
-
 
 	std::string	getFirstName(void) const;
 	std::string	getLastName(void) const;

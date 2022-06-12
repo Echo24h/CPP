@@ -6,11 +6,11 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/05/29 15:04:43 by gborne           ###   ########.fr        #
+#    Updated: 2022/05/29 15:47:31 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS			= main.cpp Zombie.cpp zombieHorde.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++
@@ -32,9 +32,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-test:			$(NAME)
-				./megaphone "shhhhh... I think the students are asleep..."
-				./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
-				./megaphone
+leaks:			all
+				valgrind ./$(NAME)
 
 .PHONY:			all clean fclean re test
