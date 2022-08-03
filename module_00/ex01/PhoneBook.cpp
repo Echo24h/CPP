@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 17:51:58 by gborne            #+#    #+#             */
-/*   Updated: 2022/05/27 16:22:56 by gborne           ###   ########.fr       */
+/*   Updated: 2022/08/03 13:17:22 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,12 @@ void	PhoneBook::shearch(void) const
 	if (num >= 1 && num <= nbContact)
 		this->contact[num - 1].show();
 	else
-		std::cout <<  "Error" << std::endl << "Insert an index between 1 and " << nbContact << "." << std::endl;
+	{
+		if (nbContact > 0)
+			std::cout <<  "Error" << std::endl << "Insert an index between 1 and " << nbContact << "." << std::endl;
+		else
+			std::cout <<  "Error" << std::endl << "No contact created." << std::endl;
+	}
 }
 
 void	PhoneBook::_delOld(void)
