@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   Editor.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 17:37:42 by gborne            #+#    #+#             */
-/*   Updated: 2022/05/29 17:45:16 by gborne           ###   ########.fr       */
+/*   Created: 2022/08/04 16:20:12 by gborne            #+#    #+#             */
+/*   Updated: 2022/08/07 19:39:57 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef EDITOR_HPP
+# define EDITOR_HPP
 
+# include <iostream>
+# include <fstream>
 
-int main()
-{
-	{
-		Weapon club = Weapon("crude spiked club");
+class Editor {
 
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
+public:
 
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
-}
+	Editor( std::string const ifname, std::string const s1, std::string const s2 );
+	~Editor( void );
+
+	void	createReplaceFile( void ) const;
+
+private:
+
+	std::string const	_ifname;
+	std::string const	_s1;
+	std::string const	_s2;
+};
+
+#endif
+

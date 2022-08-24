@@ -6,11 +6,11 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/08/03 17:37:33 by gborne           ###   ########.fr        #
+#    Updated: 2022/08/07 22:30:19 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS			= main.cpp Harl.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++

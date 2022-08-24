@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 18:00:24 by gborne            #+#    #+#             */
-/*   Updated: 2022/08/03 16:15:01 by gborne           ###   ########.fr       */
+/*   Created: 2022/08/04 15:14:47 by gborne            #+#    #+#             */
+/*   Updated: 2022/08/24 14:33:54 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "Harl.hpp"
 
-# include <iostream>
-# include <string>
+// https://www.codeguru.com/cplusplus/c-tutorial-pointer-to-member-function/
 
-class Weapon {
-
-public:
-
-	Weapon( std::string const type );
-	~Weapon( void );
-
-	std::string	&getType( void );
-	void		setType( std::string  const type );
-
-private:
-
-	std::string	_type;
-};
-
-#endif
+int	main( void )
+{
+	Harl harl;
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("other");
+	return (0);
+}
