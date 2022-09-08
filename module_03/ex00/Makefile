@@ -6,11 +6,11 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/08/24 15:31:59 by gborne           ###   ########.fr        #
+#    Updated: 2022/09/01 12:30:20 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Harl.cpp
+SRCS			= main.cpp ClapTrap.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++

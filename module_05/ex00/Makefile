@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/08/24 15:31:59 by gborne           ###   ########.fr        #
+#    Created: 2022/09/04 23:16:53 by gborne            #+#    #+#              #
+#    Updated: 2022/09/05 16:37:27 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Harl.cpp
+SRCS			= main.cpp Bureaucrat.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++

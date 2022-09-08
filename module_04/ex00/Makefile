@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/08/24 15:31:59 by gborne           ###   ########.fr        #
+#    Created: 2022/09/04 11:50:53 by gborne            #+#    #+#              #
+#    Updated: 2022/09/04 21:13:17 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Harl.cpp
+SRCS			= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++
