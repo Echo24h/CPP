@@ -5,12 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/10/05 16:21:56 by gborne           ###   ########.fr        #
+#    Created: 2022/09/04 23:16:53 by gborne            #+#    #+#              #
+#    Updated: 2022/10/05 16:20:18 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS			= main.cpp
+
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++

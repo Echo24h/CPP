@@ -6,7 +6,7 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/05/29 17:23:26 by gborne           ###   ########.fr        #
+#    Updated: 2022/10/05 16:23:04 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,9 @@ RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 NAME			= hi
+
+%.o : %.c
+	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 all:			$(NAME)
 

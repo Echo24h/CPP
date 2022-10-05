@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:01:52 by gborne            #+#    #+#             */
-/*   Updated: 2022/10/05 14:57:48 by gborne           ###   ########.fr       */
+/*   Updated: 2022/10/05 15:04:39 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ int	main( void ) {
 
 	Base *ptr = generate();
 
-	std::cout << "identify(Base* p): ";
-	identify(*ptr);
 	std::cout << "identify(Base& p): ";
+	identify(*ptr);
+	std::cout << "identify(Base* p): ";
 	identify(ptr);
 
 	delete ptr;

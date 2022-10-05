@@ -6,7 +6,7 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 14:53:10 by gborne            #+#    #+#              #
-#    Updated: 2022/05/22 17:48:57 by gborne           ###   ########.fr        #
+#    Updated: 2022/10/05 16:23:25 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,9 @@ RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 NAME			= phonebook
+
+%.o : %.c
+	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 all:			$(NAME)
 
