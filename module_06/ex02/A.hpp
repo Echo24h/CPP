@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 14:10:48 by gborne            #+#    #+#             */
-/*   Updated: 2022/09/12 23:52:04 by gborne           ###   ########.fr       */
+/*   Created: 2022/10/05 14:07:22 by gborne            #+#    #+#             */
+/*   Updated: 2022/10/05 14:25:41 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef A_HPP
+# define A_HPP
 
-#include "AAnimal.hpp"
-#include "Brain.hpp"
+# include "Base.hpp"
 
-class Dog : public AAnimal {
+class A : public Base {
 
-public:
-
-	Dog( void );
-	Dog( Dog const & src );
-
-	Dog &	operator=( Dog const & rhs );
-
-	~Dog();
-
-	void	makeSound( void ) const;
-	void	sayIdea( void ) const;
-
-private:
-
-	Brain	*_brain;
 };
 
 #endif

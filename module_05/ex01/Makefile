@@ -6,12 +6,11 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/04 23:16:53 by gborne            #+#    #+#              #
-#    Updated: 2022/10/05 13:29:45 by gborne           ###   ########.fr        #
+#    Updated: 2022/09/12 20:41:21 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp
-
+SRCS			= main.cpp Bureaucrat.cpp Form.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= g++

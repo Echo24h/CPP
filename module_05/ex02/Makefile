@@ -6,11 +6,14 @@
 #    By: gborne <gborne@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/04 23:16:53 by gborne            #+#    #+#              #
-#    Updated: 2022/10/05 13:29:45 by gborne           ###   ########.fr        #
+#    Updated: 2022/09/13 02:35:06 by gborne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp
+SRCS			= main.cpp Bureaucrat.cpp AForm.cpp \
+				ShrubberyCreationForm.cpp \
+				RobotomyRequestForm.cpp \
+				PresidentialPardonForm.cpp
 
 OBJS			= $(SRCS:.cpp=.o)
 

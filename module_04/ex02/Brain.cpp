@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 21:48:19 by gborne            #+#    #+#             */
-/*   Updated: 2022/09/04 22:37:54 by gborne           ###   ########.fr       */
+/*   Updated: 2022/09/13 02:15:49 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ void	Brain::fillIdeas( void ) {
 }
 
 std::string	Brain::getRandomIdea( void ) const {
+
+	srand(time(NULL));
 	return this->ideas[rand() % 100];
 }

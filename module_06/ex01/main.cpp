@@ -5,63 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 18:00:16 by gborne            #+#    #+#             */
-/*   Updated: 2022/09/25 15:06:35 by gborne           ###   ########.fr       */
+/*   Created: 2022/09/27 13:20:14 by gborne            #+#    #+#             */
+/*   Updated: 2022/10/05 14:00:25 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include <iostream>
+#include <stdint.h>
 
-int	main( int argc, char **argv ) {
+struct Data {
+	int			n;
+	std::string	str;
+};
 
-	if (argc != 2)
-		std::cout << "Wrong arguments. Ex: ./convert \"0\"" << std::endl;
-	else {
+uintptr_t serialize(Data* ptr) {
+	return reinterpret_cast<uintptr_t>(ptr);
+}
 
-		try {
-			Convert n(argv[1]);
+Data* deserialize(uintptr_t raw) {
+	return reinterpret_cast<Data *>(raw);
+}
 
-			std::cout << "char: ";
-			try {
-				char	c = n.getChar();
-				std::cout << "'" << c << "'" << std::endl;
-			} catch ( std::exception & e ) {
-				std::cout << e.what() << std::endl;
-			}
+int	main( void ) {
 
-			std::cout << "int: ";
-			try {
-				std::cout << n.getInt() << std::endl;
-			} catch ( std::exception & e ) {
-				std::cout << e.what() << std::endl;
-			}
+	Data		*start = new Data;
+	Data		*result;
 
-			std::cout << "float: ";
-			try {
-				float numb = n.getFloat();
+	start->n = 10;
+	start->str = "coucou";
 
-				if (numb == static_cast<int>(numb))
-					std::cout << numb << ".0f" << std::endl;
-				else
-					std::cout << numb << "f" << std::endl;
+	std::cout << "START:" << std::endl;
+	std::cout << "n: " << start->n << std::endl;
+	std::cout << "str: " << start->str << std::endl;
 
-			} catch ( std::exception & e ) {
-				std::cout << e.what() << std::endl;
-			}
+	result = deserialize(serialize(start));
 
-			std::cout << "double: ";
-			try {
-				double numb = n.getDouble();
+	std::cout << "END:" << std::endl;
+	std::cout << "n: " << result->n << std::endl;
+	std::cout << "str: " << result->str << std::endl;
 
-				if (numb == static_cast<int>(numb))
-					std::cout << numb << ".0" << std::endl;
-				else
-					std::cout << numb << std::endl;
-			} catch ( std::exception & e ) {
-				std::cout << e.what() << std::endl;
-			}
-		} catch ( std::exception & e ) {
-			std::cout << e.what() << std::endl;
-		}
-	}
+	delete  start;
+
+	return 0;
 }
