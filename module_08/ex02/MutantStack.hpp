@@ -6,7 +6,7 @@
 /*   By: gborne <gborne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:40:46 by gborne            #+#    #+#             */
-/*   Updated: 2022/10/07 17:57:47 by gborne           ###   ########.fr       */
+/*   Updated: 2022/10/07 18:02:38 by gborne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 		return ;
 	}
 
-	typedef typename MutantStack<T>::stack::container_type::iterator iterator;
+	typedef typename std::stack<T>::container_type::iterator iterator;
 
 	iterator begin() {
 		return this->c.begin();
